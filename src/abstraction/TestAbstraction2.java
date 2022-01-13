@@ -15,7 +15,7 @@ public class TestAbstraction2 {
 abstract class Bike{  
   Bike(){System.out.println("bike is created");}  
   abstract void run();  
-  void changeGear(){System.out.println("gear changed");}  
+  void changeGear(){System.out.println("gear is changed");}  
 }
 
 //Creating a Child class which inherits Abstract class  
