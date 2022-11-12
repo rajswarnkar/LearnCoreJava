@@ -27,16 +27,16 @@ public class SwapNumbers {
 		System.out.println("Value of a after swapping is "+a);
 		System.out.println("Value of b after swapping is "+b);
 		
-		swap(p, q);
-		System.out.printf("p is %d, q is %d", p, q);
+		swapWithout3rdVariable(p, q);
 	}
 
-	private static void swap(int num1, int num2) {
+	private static void swapWithout3rdVariable(int num1, int num2) {
 		// TODO Auto-generated method stub
 		
 		num1 = num1 + num2;
 		num2 = num1 - num2;
 		num1 = num1 - num2;
+		System.out.printf("p is %d, q is %d", num1, num2);
 	}
 
 }

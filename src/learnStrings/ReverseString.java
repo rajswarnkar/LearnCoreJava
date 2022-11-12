@@ -21,8 +21,10 @@ public class ReverseString {
 	}
 
 	private static String reverse(String str) {
+		
 		// TODO Auto-generated method stub
 		StringBuilder  reversedString;
+		String reversedString1="";
 		if (str==null || str.isEmpty()) {
 			
 			throw new IllegalArgumentException ("Null is not a valid input");
@@ -34,16 +36,16 @@ public class ReverseString {
 			System.out.println(reversedString);
 			
 			char [] charArr = str.toCharArray();
-			String reversedString1="";
+
 			System.out.println(charArr.length);
-			
 			for (int i=charArr.length-1;i>=0;i--) {
 				reversedString1=reversedString1+charArr[i];
 				reversedString.append(charArr[i]);
-				System.out.println(reversedString1);
+				//System.out.println(reversedString1);
 			}
 		}
-		return reversedString.toString();
+		//return reversedString.toString();
+		return reversedString1;
 	}
 
 }

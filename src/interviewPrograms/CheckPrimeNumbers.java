@@ -26,26 +26,41 @@ public class CheckPrimeNumbers {
 	private static void isPrime(int[] numbers) {
 		// TODO Auto-generated method stub
 		
+		boolean isPrimeNum= false;
+		
 		if (numbers.length>0) {
-			
+			System.out.println("number of items: "+numbers.length);
 			for (int i=0;i<=numbers.length-1;i++) {
 				
 				if(numbers[i]==0 || numbers[i]==1) {
-					System.out.println(numbers[i]+ " is not a prime number.");	
+					isPrimeNum = false;	
 				}
 				else if (numbers[i]==2) {
-					System.out.println(numbers[i]+ " is a prime number.");		
+					
+					isPrimeNum = true;	
 				}
 				else {
-					int sqrt = (int) Math.sqrt(numbers[i]) + 1;
+					int sqrt = (int) Math.sqrt(numbers[i])+1;
 					for (int j = 2; j<sqrt; j++) {
 						if(numbers[i] % j == 0) {
-							System.out.println(numbers[i]+ " is a not a prime number.");
+							isPrimeNum= false;
+							break;
+						}
+						else
+						{
+							isPrimeNum = true;
 						}
 
 					}
 				}
-					
+				
+					if (isPrimeNum) {
+						System.out.println(numbers[i]+ " is a prime number.");
+					}
+					else
+					{
+						System.out.println(numbers[i]+ " is not a prime number.");
+					}
 			}
 		}
 	}
